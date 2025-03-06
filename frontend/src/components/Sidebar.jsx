@@ -1,22 +1,21 @@
-// frontend/src/components/Sidebar.jsx
+
 import React from "react";
-import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   return (
     <div className="w-64 bg-gray-800 text-white h-screen p-4">
       <ul>
         <li className="mb-4">
-          <Link to="">Customers</Link>
+          <a href="/">Customers</a>
         </li>
         <li className="mb-4">
-          <Link to="">Trips</Link>
+          <a href="#">Trips</a>
         </li>
         <li className="mb-4">
-          <Link to="">Payments</Link>
+          <a href="#">Payments</a>
         </li>
         <li className="mb-4">
-          <Link to="">Expenses</Link>
+          <a href="#">Expenses</a>
         </li>
       </ul>
     </div>
