@@ -6,7 +6,7 @@ const Sidebar = () => {
     <div className="w-64 bg-gray-800 text-white h-screen p-4">
       <ul >
         <li className="mb-4">
-          <a href="/">Customers</a>
+          <a href="/customers">Customers</a>
         </li>
         <li className="mb-4">
           <a href="/trips">Trips</a>
