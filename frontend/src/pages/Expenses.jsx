@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const Expenses = () => {
-  return (
-    <div>Expenses</div>
-  )
-}
+  return <div>Expenses</div>;
+};
 
-export default Expenses
+export default Expenses;

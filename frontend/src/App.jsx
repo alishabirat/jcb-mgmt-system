@@ -1,30 +1,34 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Sidebar from "./components/Sidebar";
-import JcbDashboard from "./pages/Dashboard";
-import Payments from "./pages/Payments";
+// App.jsx (Root Component)
+import React from "react";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
+import Dashboard from "./pages/Dashboard";
 import Customers from "./pages/Customers";
-import Trips from "./pages/Trips";
-import Expenses from "./pages/Expenses";
+import Booking from "./pages/Booking";
+import Invoices from "./pages/Invoices";
+import Login from "./pages/Login";
 import Navbar from "./components/Navbar";
-export default function App() {
+import Sidebar from "./components/Sidebar";
+
+const App = () => {
   return (
-    <Router>
-      <div className="sticky z-10 top-0 left-0 right-0 bottom-0">
-        <Navbar />
-      </div>
-      <div className="flex h-auto top-0 left-0 right-0 bottom-0">
+    <BrowserRouter>
+      <div className="flex">
         <Sidebar />
-        <div className="ml-2 flex-1 p-6">
-          {/* Push content to the right */}
-          <Routes>
-            <Route path="/" element={<JcbDashboard />} />
-            <Route path="/customers" element={<Customers />} />
-            <Route path="/payments" element={<Payments />} />
-            <Route path="/trips" element={<Trips />} />
-            <Route path="/expenses" element={<Expenses />} />
-          </Routes>
+        <div className="flex-1">
+          <Navbar />
+          <div className="p-4">
+            <Routes>
+              <Route path="/" element={<Dashboard />} />
+              <Route path="/customers" element={<Customers />} />
+              <Route path="/bookings" element={<Booking />} />
+              <Route path="/invoices" element={<Invoices />} />
+              <Route path="/login" element={<Login />} />
+            </Routes>
+          </div>
         </div>
       </div>
-    </Router>
+    </BrowserRouter>
   );
-}
+};
+
+export default App;
