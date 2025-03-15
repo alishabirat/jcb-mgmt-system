@@ -6,7 +6,7 @@ const Sidebar = () => {
   const [active, setActive] = useState("Dashboard");
 
   const menuItems = [
-    { name: "Dashboard", icon: <Home size={20} /> , path: "/dashboard" },
+    { name: "Dashboard", icon: <Home size={20} /> , path: "/" },
     { name: "Customers", icon: <Users size={20} /> , path: "/customers" },
     { name: "Bookings", icon: <Calendar size={20} /> , path: "/bookings" },
     // { name: "Machines", icon: <Package size={20} /> , path: "/dashboard" },
