@@ -97,7 +97,7 @@ export default function DashboardPage() {
       </div>
 
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-7">
-        <div className="col-span-4 p-4 border rounded-lg shadow-md bg-white h-[300px] flex items-center justify-center">
+        <div className="col-span-4 p-4 border rounded-lg shadow-md bg-white  flex items-center justify-center">
           <h2 className="text-lg font-semibold">Revenue Overview</h2>
         </div>
         <div className="col-span-3 p-4 border rounded-lg shadow-md bg-white">
