@@ -1,16 +1,17 @@
 import { useState } from "react";
 import { Home, Users, Calendar, Package, FileText, BarChart, Settings } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   const [active, setActive] = useState("Dashboard");
 
   const menuItems = [
-    { name: "Dashboard", icon: <Home size={20} /> },
-    { name: "Customers", icon: <Users size={20} /> },
-    { name: "Bookings", icon: <Calendar size={20} /> },
-    { name: "Machines", icon: <Package size={20} /> },
-    { name: "Invoices", icon: <FileText size={20} /> },
-    { name: "Reports", icon: <BarChart size={20} />, notification: true },
+    { name: "Dashboard", icon: <Home size={20} /> , path: "/dashboard" },
+    { name: "Customers", icon: <Users size={20} /> , path: "/customers" },
+    { name: "Bookings", icon: <Calendar size={20} /> , path: "/bookings" },
+    // { name: "Machines", icon: <Package size={20} /> , path: "/dashboard" },
+    { name: "Invoices", icon: <FileText size={20} /> , path: "/invoices" },
+    // { name: "Reports", icon: <BarChart size={20} />,  path: "/dashboard", notification: true },
   ];
 
   return (
@@ -24,6 +25,7 @@ const Sidebar = () => {
 
       <nav className="flex-1">
         {menuItems.map((item) => (
+          <Link to={item.path} key={item.name}>
           <div
             key={item.name}
             className={`flex items-center gap-3 p-3 rounded-lg cursor-pointer transition-all duration-300 ${
@@ -35,6 +37,7 @@ const Sidebar = () => {
             <span className="flex-1">{item.name}</span>
             {item.notification && <span className="w-2 h-2 bg-red-500 rounded-full"></span>}
           </div>
+          </Link>
         ))}
       </nav>
 
