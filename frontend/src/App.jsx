@@ -8,6 +8,7 @@ import Invoices from "./pages/Invoices";
 import Login from "./pages/Login";
 // import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
+import AddCustomerForm from "./dash/AddCustomer";
 
 const App = () => {
   return (
@@ -23,6 +24,8 @@ const App = () => {
               <Route path="/bookings" element={<Booking />} />
               <Route path="/invoices" element={<Invoices />} />
               <Route path="/login" element={<Login />} />
+              <Route path="/add-customer" element={<AddCustomerForm />} />
+
             </Routes>
           </div>
         </div>
