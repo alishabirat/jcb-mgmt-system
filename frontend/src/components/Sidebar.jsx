@@ -34,15 +34,17 @@ const Sidebar = () => {
   return (
     <div
       className={`min-h-screen bg-gray-900 text-white flex flex-col p-4 transition-all duration-300 ${
-        isCollapsed ? "w-28" : "w-64"
+        isCollapsed ? "w-20" : "w-64"
       }`}
     >
       {/* Header Section */}
-      <div className="flex items-center gap-2 mb-6">
-        <div className="bg-white p-2 rounded-md">
+      <div className="flex justify-center items-center gap-2 mb-6">
+        {/* <div className="bg-white  p-2 rounded-md">
           <Package size={24} className="text-gray-900" />
-        </div>
-        {!isCollapsed && <h1 className="text-xl font-semibold">JCB Rental Management</h1>}
+        </div> */}
+        {!isCollapsed &&<> <div className="bg-white  p-4 rounded-md">
+          <Package size={24} className="text-gray-900" />
+        </div><h1 className="text-xl font-semibold">JCB Rental Management</h1></>}
         <Menu
           className="cursor-pointer"
           onClick={() => setIsCollapsed(!isCollapsed)} // Toggle collapsed state
